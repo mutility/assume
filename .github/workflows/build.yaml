@@ -30,7 +30,7 @@ jobs:
         run: go test -tags=noverify ./...
 
       - name: coverpkg
-        uses: mutility/coverpkg@remote-path
+        uses: mutility/coverpkg@v1
         with:
           token: ${{ github.token }}
           groupby: file
