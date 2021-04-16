@@ -33,4 +33,5 @@ jobs:
         uses: mutility/coverpkg@remote-path
         with:
           token: ${{ github.token }}
+          groupby: file
           comment: replace
