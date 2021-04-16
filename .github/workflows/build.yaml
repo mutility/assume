@@ -18,6 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2.1.3
+        with:
+          go-version: '^1.16'
 
       # Runs tests with panics
       - name: test
@@ -26,3 +28,10 @@ jobs:
       # Runs tests without panics
       - name: test
         run: go test -tags=noverify ./...
+
+      - name: coverpkg
+        uses: mutility/coverpkg@v1
+        with:
+          token: ${{ github.token }}
+          groupby: file
+          comment: replace
