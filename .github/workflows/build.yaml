@@ -28,7 +28,7 @@ jobs:
         run: go test -tags=noverify ./...
 
       - name: coverpkg
-        uses: mutility/coverpkg@v1
+        uses: mutility/coverpkg@remote-path
         with:
           token: ${{ github.token }}
           comment: replace
